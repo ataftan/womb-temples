@@ -116,7 +116,8 @@ $(document).ready(function () {
                   alert("a reckless sound");
 
 
-           alert("a threshold of grandmothers aliven");
+           alert("beyond border wars");
+            alert("in the planet's core");
 
     //adding opacity to bg
 let currentBg = $("body").css("background-image"); 

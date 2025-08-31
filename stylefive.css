@@ -5,21 +5,23 @@
 }
 
 body,html {
-   padding: 0px;
-  margin:  0px;
+
+    padding: 0px;
+  margin: 0px;
+         image-rendering: pixelated;
+
+  height: 100vh;
+  overflow-x: auto;
+  /* Allow horizontal scroll */
+  overflow-y: hidden;
+  /* Hide vertical scroll */
+
   
  
 
 
 }
 
-body{
-/*      background-image: url("https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/kumb.png?v=1748301270189");
-    background-repeat: no-repeat;
-    background-size: contain;
-  background-position:center; */
-   
-}
  ::-webkit-scrollbar {
  background:none;  
 

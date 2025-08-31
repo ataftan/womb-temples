@@ -1,23 +1,20 @@
 const images = [
-  "https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/the%20dude.png?v=1747543170509",
-  
-  /// new shit
-  
-  "https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/another.png?v=1747545046536",
-  "https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/sssss.png?v=1747545086342",
-  "https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/rug%20ai.png?v=1747545088271",
-  "https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/sss.png?v=1747545089867",
-  "https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/borders.png?v=1747545092545",
-  "https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/aaaaaaa.png?v=1747545095364",
-  "https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/ssss.png?v=1747545102295",
-  "https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/ss.png?v=1747545103405",
-  "https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/sass.png?v=1747545105467",
-  "https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/rajaji.png?v=1747545106726",
-  ///
-  
-  "https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/legs.png?v=1747550534284",
-  "https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/ll.png?v=1747550531346",
-  "https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/lllll.png?v=1747550530215"
+ 
+  // "a3.png",
+  "a4.png",
+"a5.png",
+ "a6.png",
+
+    "a7.png",
+  "a8.png",
+  "a9.png",
+ "a13.png",
+ "a14.png",
+  "a15.png",
+  "a16.png",
+ "a17.png",
+   "a18.png",
+  "a19.png"
 ];
 
 const container = document.getElementById("container");
@@ -25,13 +22,16 @@ const container = document.getElementById("container");
 function createRandomImage() {
   const randomImage = images[Math.floor(Math.random() * images.length)];
   const img = document.createElement("img");
+ const padding=10;
   img.src = randomImage;
   img.style.position = "absolute";
   img.style.opacity = 0;
-  img.style.transition = "opacity 1s ease";
+  img.style.transition = "opacity 1s ease-in-out";
   
   //random rotation
-  const randomAngle = Math.random() * 10 - 5; // -30 to +30 degrees
+    const randomAngle = Math.random() 
+
+  // const randomAngle = Math.random() * 10 - 2; // -30 to +30 degrees
 img.style.transform = `rotate(${randomAngle}deg)`;
 
 
@@ -40,39 +40,38 @@ img.style.transform = `rotate(${randomAngle}deg)`;
     const aspectRatio = img.naturalWidth / img.naturalHeight;
 
     // Random width between 100 and 700
-    const randomWidth = Math.random() * 600 + 100;
-    const randomHeight = randomWidth / aspectRatio;
+const randomWidth = Math.random() * 900 + 400;  // 200–900px wide
+const randomHeight = randomWidth / aspectRatio; // keep aspect ratio
+
 
     img.style.width = `${randomWidth}px`;
     img.style.height = `${randomHeight}px`;
 
     // Position so the full image fits within viewport
-    const maxX = window.innerWidth - randomWidth;
-    const maxY = window.innerHeight - randomHeight;
-    img.style.left = `${Math.random() * maxX}px`;
-    img.style.top = `${Math.random() * maxY}px`;
-
+    const maxX = window.innerWidth - (randomWidth- padding);
+    const maxY = window.innerHeight - (randomHeight- padding);
+   const jitter = 80; // px of wiggle room
+img.style.left = `${Math.max(0, Math.random() * maxX + (Math.random() - 0.5) * jitter)}px`;
+img.style.top = `${Math.max(0, Math.random() * maxY + (Math.random() - 0.5) * jitter)}px`;
     document.getElementById("container").appendChild(img);
       
     ///draggable
     $(img).draggable();
 
+img.style.willChange = "opacity, transform";
 
     // Fade in
-    requestAnimationFrame(() => {
       img.style.opacity = 1;
-    });
 
     // Remove after 1 minute with fade out
     setTimeout(() => {
-      img.style.transition = "opacity 5s ease-in-out";
       img.style.opacity = 0;
-      setTimeout(() => img.remove(), 4000);
-    }, 40000);
+      setTimeout(() => img.remove(), 5000);
+    }, 5000);
   };
 
   // Schedule next image creation at random interval (1-5 sec)
-  setTimeout(createRandomImage, Math.random() * 1500 + 300);
+  setTimeout(createRandomImage, Math.random() * 1000 + 1000);
 }
 
 createRandomImage();

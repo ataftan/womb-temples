@@ -7,6 +7,8 @@
 body,html {
    padding: 0px;
   margin:  0px;
+         image-rendering: pixelated;
+
   
  
 
@@ -14,11 +16,14 @@ body,html {
 }
 
 body{
- min-height: 100vh;  
-
+  width: 1000px;
+  display: block;
+  background-image: url("landscape2.2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
      background-image: url("https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/dddd.png?v=1748278737385");
     background-repeat: no-repeat;
-    background-size: contain;
 /*   background-position:center;
    */
 }
