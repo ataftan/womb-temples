@@ -1,6 +1,9 @@
 $(".i").on("mouseenter", function () {
-  const text = $(this).find("h1").text();
-  $("#txt span").html(text);
+  const lines = $(this).find("h1").map(function () {
+    return $(this).text();
+  }).get().join("<br>");
+  
+  $("#txt span").html(lines);
 }).on("mouseleave", function () {
   $("#txt span").html("");
 });

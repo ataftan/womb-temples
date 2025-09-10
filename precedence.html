@@ -17,6 +17,10 @@
     <script src="jquery.ui.touch-punch.min.js"></script>
 
     <style>
+      @font-face {
+  font-family: circus;
+  src: url("https://cdn.glitch.global/0fc0bf42-64f5-4565-9fac-7891d0f1ac73/CirrusCumulus.otf?v=1740072680175");
+}
         body {
   /* width: 1200px; */
   display: block;
@@ -33,9 +37,50 @@
   background-size: cover;
   background-position: center center;
 
+}
+.i{
+  display:block;
+      min-height: 100vh;
+        width: 100vw;
+  height: 100vh;
 
 }
+h1{
+  padding: 13em;
+  display:none;
+}
+#txt {
 
+  position: fixed;
+  font-family: "circus";
+  color: rgba(132, 25, 25, 0.8);
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: -300px;
+  z-index: 99999999;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#txt span {
+  font-style: italic;
+  font-size: 2.7rem;
+  display: inline-block;
+  margin: 0 auto;
+  max-height: 95vh;
+  width: 40vw;
+  background-color: rgba(255, 255, 255, 0.5);
+  line-height: 90%;
+  letter-spacing: 5px;
+  z-index: 2;
+  text-overflow: ellipsis;
+  object-fit: contain;
+  word-break: keep-all;
+}
     </style>
   </head>
   <body onclick="window.location.href='nameless.html'">
@@ -44,9 +89,15 @@
         <span></span>
       </div>
 
-      <div id="i">
+      <div class="i">
         
-       
+       <h1> the womb does not know gender.</h1>
+       <h1>it only knows the timeless gaps between life and death</h1>
+           <h1> we call living</h1>
+           <h1> the womb survives border wars </h1>
+           <h1>memories of love reunited with the precious</h1>
+
+</h1>
       </div>
     </main>
     <script
