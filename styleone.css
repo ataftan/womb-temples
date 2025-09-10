@@ -40,7 +40,9 @@ body {
  background:none;  
 
 }
-
+h1{
+  display:none;
+}
 body.toggled{
    background-image: url("ha-b-2.png");
     background-repeat: no-repeat;
@@ -128,39 +130,10 @@ grid-auto-columns: minmax(500px,1fr); */
 
 
 
+
+
+
 .txt {
-
-  position: fixed;
-  font-family: "Times Now";
-  color: rgba(0, 0, 0, 0.8);
-  pointer-events: none;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: 99999999;
-  overflow: hidden;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.txt span {
-  font-size: 4.6rem;
-  display: inline-block;
-  margin: 0 auto;
-  max-height: 95vh;
-  width: 95vw;
-  line-height: 85%;
-  letter-spacing: -2px;
-  z-index: 2;
-  text-overflow: ellipsis;
-  object-fit: contain;
-  word-break: keep-all;
-}
-
-
-.pre-txt {
 
   position: fixed;
     font-family: "circus";
@@ -177,7 +150,7 @@ grid-auto-columns: minmax(500px,1fr); */
   justify-content: center;
   align-items: center;
 }
-.pre-txt span {
+.txt span {
   font-size:6rem;
   display: inline-block;
   margin: 0 auto;

@@ -43,7 +43,7 @@ img {
 #txt {
 
   position: fixed;
-  font-family: "Times Now";
+  font-family: "circus";
   color: rgba(0, 0, 0, 0.8);
   pointer-events: none;
   width: 100vw;
