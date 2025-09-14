@@ -1,0 +1,104 @@
+body {
+  display: flex;
+  justify-content: center;
+  image-rendering: pixelated;
+
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+
+  background-image:
+    url("../assets/img/agannasutta.png");
+  background-size: 50%;
+  background-position: left;
+  background-repeat: no-repeat;
+
+}
+
+img {
+  width: 80%;
+  align-content: center;
+}
+
+
+
+main {
+  width: 400px;
+  /* fixed width */
+  margin-left: auto;
+  /* push to right */
+  text-align: center;
+  /* align text inside to right */
+  box-sizing: border-box;
+  /* so padding doesn't increase width */
+  padding: 0 10px;
+  /* optional padding */
+}
+
+/* optional max width */
+
+#name_prompt {
+  /*   position: absolute; */
+  z-index: 100000;
+  /* higher than any other element */
+  pointer-events: auto;
+}
+
+
+#name_prompt-2,
+#name_prompt-3 {
+  display: none;
+}
+
+#prompt-3,
+#prompt-4,
+#prompt-5,
+#prompt-6 {
+  display: none;
+  position: fixed;
+  font-family: "Times Now";
+  color: rgba(0, 0, 0, 0.8);
+  pointer-events: auto;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#prompt-3,
+#prompt-4,
+#prompt-5 span {
+  font-size: 14rem;
+  display: inline-block;
+  margin: 0 auto;
+  max-height: 95vh;
+  width: 95vw;
+  line-height: 85%;
+  letter-spacing: 60px;
+  z-index: 2;
+  text-overflow: ellipsis;
+  object-fit: contain;
+  word-break: keep-all;
+}
+
+#prompt-6 span {
+  font-size: 10rem;
+  display: inline-block;
+  margin: 0 auto;
+  max-height: 95vh;
+  width: 95vw;
+  line-height: 85%;
+  letter-spacing: 30px;
+  z-index: 2;
+  text-overflow: ellipsis;
+  object-fit: contain;
+  word-break: keep-all;
+}
