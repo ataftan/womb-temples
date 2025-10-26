@@ -14,8 +14,13 @@ const images = [
   "assets/img/ran/a18.png",
   "assets/img/ran/a19.png",
   "assets/img/ran/a20.png",
-  "assets/img/ran/a22.png",
-  "assets/img/ran/a23.png"
+  // "assets/img/ran/a22.png",
+  "assets/img/ran/a23.png",
+    "assets/img/ran/a24.png",
+
+      "assets/img/ran/a25.png",
+  "assets/img/ran/a26.png",
+
 
 
 ];

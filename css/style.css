@@ -20,7 +20,7 @@ html {
 body {
   /* width: 1200px; */
   display: block;
-  background-image: url('../assets/img/mainbg.png');
+  background-image: url('../assets/img/mainbg1.2.png');
   background-repeat: no-repeat;
   background-size: cover;
   /* OR try background-size: 100% 100%; */
@@ -209,10 +209,9 @@ grid-column: 1;
     background-attachment: scroll;
     min-height: 100vh;
     /* ensures it fills screen height */
-  background-image: url("FULL\ LANDSCAPE1.5.png");
+  background-image: url('../assets/img/mainbg1.2.png');
        image-rendering: pixelated;
 
-    /* background-image: url("https://cdn.glitch.global/e573fc2d-d65d-49bb-9162-63429baf793c/bg.png?v=1747714436692"); */
     background-repeat: no-repeat;
     background-size: cover;
     /* OR try background-size: 100% 100%; */
